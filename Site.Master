@@ -15,21 +15,20 @@
     <!-- existing head content -->
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 
-    
     <link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
-
-   
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <form runat="server">
         <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="Default.aspx">Home</a>
-                <a href="About.aspx">About</a>
-                <a href="Contact.aspx">Contact</a>
-            </div>
+        <nav>
+            <ul>
+                <li><a href="Default.aspx">Home</a></li>
+                <li><a href="Skills.aspx">Skills</a></li>
+                <li><a href="Projects.aspx">Projects</a></li>
+                <li><a href="Credentials.aspx">Credentials</a></li>
+                <li><a href="Contact.aspx">Contact Us</a></li>
+            </ul>
         </nav>
 
         <!-- Main Content Area -->
