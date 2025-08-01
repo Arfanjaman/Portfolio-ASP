@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Portfolio_try_1.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+       
+    <!-- existing head content -->
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+    
+    <link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
+
+   
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="Default.aspx">Home</a>
+                <a href="About.aspx">About</a>
+                <a href="Contact.aspx">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My Portfolio</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
