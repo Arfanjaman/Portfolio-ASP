@@ -157,7 +157,6 @@
     </Compile>
     <Compile Include="Skills.aspx.cs">
       <DependentUpon>Skills.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Skills.aspx.designer.cs">
       <DependentUpon>Skills.aspx</DependentUpon>
