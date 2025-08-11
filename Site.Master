@@ -12,11 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
        
+    <link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- existing head content -->
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 
-    <link rel="stylesheet" type="text/css" href="~/Styles/Styles.css" />
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
 </head>
 <body>
     <form runat="server">

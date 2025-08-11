@@ -102,6 +102,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Projects.aspx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,10 +112,12 @@
     <Content Include="Images\project2.jpg" />
     <Content Include="Images\project3.jpg" />
     <Content Include="Scripts\Default.js" />
+    <Content Include="Scripts\Project.js" />
     <Content Include="Scripts\Skills.js" />
     <Content Include="Site.Master" />
     <Content Include="Skills.aspx" />
     <Content Include="Styles\default.css" />
+    <Content Include="Styles\Project.css" />
     <Content Include="Styles\Skills.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="ViewSwitcher.ascx" />
@@ -167,6 +170,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
