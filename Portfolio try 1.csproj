@@ -108,6 +108,7 @@
     <Content Include="Global.asax" />
     <Content Include="Projects.aspx" />
     <Content Include="Credentials.aspx" />
+    <Content Include="Contact.aspx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="Credentials.aspx.designer.cs">
       <DependentUpon>Credentials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
