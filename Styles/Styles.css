@@ -223,3 +223,127 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: none; /* Hide the old header since we have hero section now */
 }
+
+/* Footer Styles */
+.site-footer {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c, #3a3a3a);
+    color: #ecf0f1;
+    padding: 3rem 2rem 2rem;
+    margin-top: 4rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    border-top: 3px solid #3498db;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.15);
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.social-link svg {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+.footer-info p {
+    margin: 0;
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+.email-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.email-link:hover {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.15);
+    border-color: #e74c3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.email-link svg {
+    transition: transform 0.3s ease;
+    fill: currentColor;
+}
+
+.email-link:hover svg {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .social-link,
+    .email-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-link span,
+    .email-link span {
+        display: none;
+    }
+    
+    .social-link,
+    .email-link {
+        padding: 0.6rem;
+        min-width: 44px;
+        justify-content: center;
+    }
+}
