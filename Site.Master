@@ -29,6 +29,7 @@
                 <li><a href="<%= ResolveUrl("~/Projects.aspx") %>">Projects</a></li>
                 <li><a href="<%= ResolveUrl("~/Credentials.aspx") %>">Credentials</a></li>
                 <li><a href="<%= ResolveUrl("~/Contact.aspx") %>">Contact Us</a></li>
+                <li><a href="<%= ResolveUrl("~/AdminLogin.aspx") %>">Admin</a></li>
             </ul>
         </nav>
         

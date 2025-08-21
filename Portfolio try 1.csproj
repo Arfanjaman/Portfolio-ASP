@@ -99,6 +99,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminCredentials.aspx" />
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminProjects.aspx" />
+    <Content Include="AdminQuery.aspx" />
+    <Content Include="AdminSkills.aspx" />
     <Content Include="Images\cert1.jpg" />
     <Content Include="Images\cert2.jpg" />
     <Content Include="Images\cert3.jpg" />
@@ -123,6 +129,7 @@
     <Content Include="Scripts\Skills.js" />
     <Content Include="Site.Master" />
     <Content Include="Skills.aspx" />
+    <Content Include="Styles\Admin.css" />
     <Content Include="Styles\Credentials.css" />
     <Content Include="Styles\default.css" />
     <Content Include="Styles\Project.css" />
@@ -134,6 +141,48 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCredentials.aspx.cs">
+      <DependentUpon>AdminCredentials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCredentials.aspx.designer.cs">
+      <DependentUpon>AdminCredentials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProjects.aspx.cs">
+      <DependentUpon>AdminProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProjects.aspx.designer.cs">
+      <DependentUpon>AdminProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQuery.aspx.cs">
+      <DependentUpon>AdminQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminQuery.aspx.designer.cs">
+      <DependentUpon>AdminQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSkills.aspx.cs">
+      <DependentUpon>AdminSkills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSkills.aspx.designer.cs">
+      <DependentUpon>AdminSkills.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Default.aspx.cs">
