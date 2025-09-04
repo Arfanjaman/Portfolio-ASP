@@ -186,7 +186,7 @@
 
         @media screen and (max-width: 600px) {
             .footer-content {
-                padding: 1rem !important; /* Add padding to the footer for smaller screens */
+                padding: 1rem !important; 
             }
 
             .social-links {
@@ -223,7 +223,7 @@
                 width: 100% !important;
             }
 
-        /* (optional) ensure the container can wrap on small screens */
+        /*ensure the container can wrap on small screens */
         @media (max-width: 768px) {
             .responsive-nav .nav-container {
                 flex-wrap: wrap !important;
