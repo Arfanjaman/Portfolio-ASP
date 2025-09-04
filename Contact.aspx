@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
-        /* Contact form container */
+        
         .contact-container {
             width: 50%;
             margin: 50px auto;
@@ -64,6 +64,13 @@
             font-size: 16px;
             color: #333;
             margin-bottom: 10px;
+        }
+        @media (max-width: 760px) {
+            .contact-container {
+                width: 80%;
+            
+            }
+
         }
     </style>
 </asp:Content>

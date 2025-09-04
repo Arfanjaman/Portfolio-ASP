@@ -30,6 +30,7 @@
                     <li><a href="AdminProjects.aspx">Manage Projects</a></li>
                     <li><a href="AdminCredentials.aspx">Manage Credentials</a></li>
                     <li><a href="AdminSkills.aspx">Manage Skills</a></li>
+                    <li><a href="AdminMessages.aspx">Contact Messages</a></li>
                     <li><a href="AdminQuery.aspx">Database Query</a></li>
                     <li><a href="Default.aspx" target="_blank">View Portfolio</a></li>
                 </ul>
@@ -38,44 +39,62 @@
             <main class="admin-content">
                 <div class="dashboard-header">
                     <h1>Dashboard Overview</h1>
-                    
                 </div>
 
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-icon"><image class="stat-icon" src="./Images/project.png"></image></div>
+                        <div class="stat-icon"><img class="stat-icon" src="./Images/project.png" alt="Projects" /></div>
                         <div class="stat-info">
-                            <h3><asp:Label ID="lblProjectsCount" runat="server"></asp:Label></h3>
+                            <h3><asp:Label ID="lblProjectsCount" runat="server">0</asp:Label></h3>
                             <p>Total Projects</p>
                         </div>
                         <a href="AdminProjects.aspx" class="stat-link">Manage</a>
                     </div>
 
                     <div class="stat-card">
-                       <div class="stat-icon"><image class="stat-icon" src="./Images/credentials.png"></image></div>
+                       <div class="stat-icon"><img class="stat-icon" src="./Images/credentials.png" alt="Credentials" /></div>
                         <div class="stat-info">
-                            <h3><asp:Label ID="lblCredentialsCount" runat="server"></asp:Label></h3>
+                            <h3><asp:Label ID="lblCredentialsCount" runat="server">0</asp:Label></h3>
                             <p>Credentials</p>
                         </div>
                         <a href="AdminCredentials.aspx" class="stat-link">Manage</a>
                     </div>
 
                     <div class="stat-card">
-                        <div class="stat-icon"><image class="stat-icon" src="./Images/skills.png"></image></div>
+                        <div class="stat-icon"><img class="stat-icon" src="./Images/skills.png" alt="Skills" /></div>
                         <div class="stat-info">
-                            <h3><asp:Label ID="lblSkillsCount" runat="server"></asp:Label></h3>
+                            <h3><asp:Label ID="lblSkillsCount" runat="server">0</asp:Label></h3>
                             <p>Skills</p>
                         </div>
                         <a href="AdminSkills.aspx" class="stat-link">Manage</a>
                     </div>
 
                     <div class="stat-card">
-                       <div class="stat-icon"><image class="stat-icon" src="./Images/query.png"></image></div>
+                        <div class="stat-icon"><img class="stat-icon" src="./Images/mail.png" alt="Messages" /></div>
+                        <div class="stat-info">
+                            <h3><asp:Label ID="lblMessagesCount" runat="server">0</asp:Label></h3>
+                            <p>Contact Messages</p>
+                        </div>
+                        <a href="AdminMessages.aspx" class="stat-link">View</a>
+                    </div>
+
+                    <div class="stat-card">
+                       <div class="stat-icon"><img class="stat-icon" src="./Images/query.png" alt="Database" /></div>
                         <div class="stat-info">
                             <h3>Query</h3>
                             <p>Database</p>
                         </div>
                         <a href="AdminQuery.aspx" class="stat-link">Execute</a>
+                    </div>
+                </div>
+
+                <!-- New Messages Alert -->
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-item">
+                        <strong>Unread Messages:</strong>
+                        <asp:Label ID="lblUnreadMessagesCount" runat="server">0</asp:Label>
+                        <a href="AdminMessages.aspx" class="btn btn-primary" style="margin-left: 10px;">View Messages</a>
                     </div>
                 </div>
 
@@ -85,6 +104,7 @@
                         <a href="AdminProjects.aspx?action=add" class="btn btn-primary">Add New Project</a>
                         <a href="AdminCredentials.aspx?action=add" class="btn btn-primary">Add New Credential</a>
                         <a href="AdminSkills.aspx?action=add" class="btn btn-primary">Add New Skill</a>
+                        <a href="AdminMessages.aspx" class="btn btn-secondary">View Contact Messages</a>
                         <a href="AdminQuery.aspx" class="btn btn-secondary">Run Custom Query</a>
                     </div>
                 </div>

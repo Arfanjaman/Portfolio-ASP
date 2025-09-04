@@ -145,7 +145,7 @@
         <div class="query-container">
             <div class="query-section">
                 <h2>SQL Query Executor</h2>
-                <p>Execute SQL queries on your portfolio database. Be careful with UPDATE and DELETE operations!</p>
+                <p>Execute SQL queries</p>
 
                 <div class="quick-queries">
                     <button type="button" class="quick-query-btn" onclick="setQuery('SELECT * FROM Projects')">View All Projects</button>

@@ -66,16 +66,36 @@ namespace Portfolio_try_1
                 {
                     lblSkillsCount.Text = cmd.ExecuteScalar().ToString();
                 }
+
+                // Add contact messages count
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM ContactMessages", con))
+                    {
+                        if (lblMessagesCount != null)
+                            lblMessagesCount.Text = cmd.ExecuteScalar().ToString();
+                    }
+
+                    // Unread messages count
+                    using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM ContactMessages WHERE IsRead = 0", con))
+                    {
+                        if (lblUnreadMessagesCount != null)
+                            lblUnreadMessagesCount.Text = cmd.ExecuteScalar().ToString();
+                    }
+                }
+                catch
+                {
+                    // ContactMessages table might not exist yet
+                    if (lblMessagesCount != null) lblMessagesCount.Text = "0";
+                    if (lblUnreadMessagesCount != null) lblUnreadMessagesCount.Text = "0";
+                }
             }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            
             Session.Clear();
             Session.Abandon();
-            
-            
             Response.Redirect("AdminLogin.aspx");
         }
     }

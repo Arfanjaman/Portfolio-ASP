@@ -102,6 +102,7 @@
     <Content Include="AdminCredentials.aspx" />
     <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminMessages.aspx" />
     <Content Include="AdminProjects.aspx" />
     <Content Include="AdminQuery.aspx" />
     <Content Include="AdminSkills.aspx" />
@@ -115,6 +116,7 @@
     <Content Include="Projects.aspx" />
     <Content Include="Credentials.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="ContactSystem_README.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +125,7 @@
     <Content Include="Images\project1.jpg" />
     <Content Include="Images\project2.jpg" />
     <Content Include="Images\project3.jpg" />
+    <Content Include="Scripts\CreateContactMessagesTable.sql" />
     <Content Include="Scripts\Credentials.js" />
     <Content Include="Scripts\Default.js" />
     <Content Include="Scripts\Project.js" />
@@ -135,6 +138,7 @@
     <Content Include="Styles\Project.css" />
     <Content Include="Styles\Skills.css" />
     <Content Include="Styles\Styles.css" />
+    <Content Include="TestContact.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -161,6 +165,13 @@
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMessages.aspx.cs">
+      <DependentUpon>AdminMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMessages.aspx.designer.cs">
+      <DependentUpon>AdminMessages.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminProjects.aspx.cs">
       <DependentUpon>AdminProjects.aspx</DependentUpon>
@@ -220,6 +231,13 @@
     </Compile>
     <Compile Include="Skills.aspx.designer.cs">
       <DependentUpon>Skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestContact.aspx.cs">
+      <DependentUpon>TestContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestContact.aspx.designer.cs">
+      <DependentUpon>TestContact.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

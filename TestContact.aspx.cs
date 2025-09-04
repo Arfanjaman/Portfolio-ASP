@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.UI;
 
 namespace Portfolio_try_1
 {
-    public partial class Contact : System.Web.UI.Page
+    public partial class TestContact : System.Web.UI.Page
     {
         private string ConnectionString => ConfigurationManager.ConnectionStrings["PortfolioConnection"].ConnectionString;
 
@@ -13,7 +13,6 @@ namespace Portfolio_try_1
         {
             if (!IsPostBack)
             {
-                // Create the ContactMessages table if it doesn't exist
                 CreateContactMessagesTable();
             }
         }
@@ -21,34 +20,32 @@ namespace Portfolio_try_1
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text.Trim();
-            string feedback = txtFeedback.Text.Trim();
+            string message = txtMessage.Text.Trim();
 
-            // Basic validation
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(feedback))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(message))
             {
-                Response.Write("<script>alert('Please fill in all fields.');</script>");
+                ShowMessage("Please fill in all fields.", "error");
                 return;
             }
 
-            // Validate email format
             if (!IsValidEmail(email))
             {
-                Response.Write("<script>alert('Please enter a valid email address.');</script>");
+                ShowMessage("Please enter a valid email address.", "error");
                 return;
             }
 
             try
             {
-                // Save to database instead of sending email
-                SaveContactMessage(email, feedback);
-
-                Response.Write("<script>alert('Thank you for your feedback! Your message has been saved successfully.');</script>");
+                SaveContactMessage(email, message);
+                ShowMessage("Thank you! Your message has been saved successfully. Check the admin panel to view it.", "success");
+                
+                // Clear form
                 txtEmail.Text = "";
-                txtFeedback.Text = "";
+                txtMessage.Text = "";
             }
             catch (Exception ex)
             {
-                Response.Write($"<script>alert('Error saving message: {ex.Message}');</script>");
+                ShowMessage($"Error saving message: {ex.Message}", "error");
             }
         }
 
@@ -78,8 +75,7 @@ namespace Portfolio_try_1
             }
             catch (Exception ex)
             {
-                // Log error but don't show to user
-                System.Diagnostics.Debug.WriteLine($"Error creating ContactMessages table: {ex.Message}");
+                ShowMessage($"Error creating table: {ex.Message}", "error");
             }
         }
 
@@ -115,6 +111,13 @@ namespace Portfolio_try_1
             {
                 return false;
             }
+        }
+
+        private void ShowMessage(string message, string type)
+        {
+            pnlMessage.Visible = true;
+            lblMessage.Text = message;
+            pnlMessage.CssClass = type == "error" ? "message error" : "message success";
         }
     }
 }

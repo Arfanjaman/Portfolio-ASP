@@ -30,6 +30,7 @@
                     <li><a href="AdminProjects.aspx">Manage Projects</a></li>
                     <li><a href="AdminCredentials.aspx">Manage Credentials</a></li>
                     <li><a href="AdminSkills.aspx" class="active">Manage Skills</a></li>
+                    <li><a href="AdminMessages.aspx">Contact Messages</a></li>
                     <li><a href="AdminQuery.aspx">Database Query</a></li>
                 </ul>
             </aside>
